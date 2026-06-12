@@ -1,0 +1,213 @@
+footer {
+    border-top: 1.5px solid var(--primary-color);
+   width: 100%;
+   max-width: 1000px;
+   margin: 35px auto;
+   display: flex;
+   padding-top: 40px;
+   
+
+   
+}
+
+footer .izquierda{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+    
+}
+
+
+footer .direccion{
+    display: flex;
+    font-weight: 400;
+    color: #323232;
+
+}
+
+footer .direccion .tel{
+    font-weight: 500;
+    color: #000;
+}
+
+footer .direccion hr{
+    margin: 0 15px;
+    width: 0.5px;
+    border: none;
+    background: #000;
+}
+
+footer .redes{
+    display: flex;
+    gap: 11px;
+    margin-top: 35px;
+    margin-right: 40px;
+    
+}
+
+footer .redes hr{
+    margin: 0 16px;
+    width: 0.5px;
+    border: none;
+    background: #000;
+}
+
+footer .redes a svg {
+    color: var(--primary-color);
+    transition: 0.4s;
+    width: 32px ;
+    height: 32px ;
+    
+}
+
+footer .redes a{
+    width: 32px ;
+}
+
+footer .redes a svg:hover {
+    color: var(--hover-color);
+    transform: scale(1.1);
+    
+}
+
+footer .redes a.wpp {
+    text-decoration: none;
+    width: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+footer .redes a.wpp:hover {
+    text-decoration: none;
+}
+
+footer .redes a.wpp button{
+    padding: 10px 20px;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    min-width: 120px;
+    justify-content: center;
+    outline: none;
+}
+
+footer .redes .wpp button p{
+    transition: 0.4s;
+    margin: 0;
+    display: block;
+    text-decoration: none;
+}
+
+footer .redes .wpp button svg{
+    
+    transition: 0.4s;
+    display: none;
+}
+ 
+footer .redes .wpp button:hover{
+    background: white;
+
+}
+
+footer .redes .wpp button:hover p{
+    display: none;
+}
+
+footer .redes .wpp button:hover svg{
+    display: block;
+   
+}
+footer .derechos{
+    font-size: 12px;
+    margin-top: 17px;
+    color: #555;
+}
+
+footer .derecha{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer .derecha form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+footer .derecha input,
+footer .derecha textarea,
+footer .derecha button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+footer .derecha button {
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+footer .derecha button:hover {
+    background: white;
+    transition: 0.4s;
+    color: #000;
+}
+
+footer .redes a.wpp svg {
+    transform: none;
+    transition: none;
+}
+
+footer .redes a.wpp svg:hover {
+    transform: none;
+    color: var(--primary-color);
+}
+
+@media (max-width: 700px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative; /* referencia para .derechos absoluto */
+        gap: 30px;
+        padding: 10px 10px;
+    }
+
+    footer .direccion {
+        justify-content: center;
+    }
+
+    footer .derechos {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 12px ;
+        background: #fff; /* opcional: evita transparencia sobre contenido */
+    }
+
+    footer .izquierda,
+    footer .derecha {
+        width: 100%;
+    }
+
+    footer .redes {
+        justify-content: center;
+    }
+}
