@@ -1,4 +1,4 @@
-import { baseStyles } from "../styles/base-styles.js";
+import { baseStyles } from "./base-styles.js";
 class AppHeader extends HTMLElement {
   constructor() {
     super();
@@ -27,6 +27,11 @@ class AppHeader extends HTMLElement {
     button.addEventListener("click", () => {
       menuOpciones.classList.toggle("active");
       button.classList.toggle("active");
+      button.setAttribute("aria-expanded", String(button.classList.contains("active")));
+      button.setAttribute(
+        "aria-label",
+        button.classList.contains("active") ? "Cerrar menú" : "Abrir menú",
+      );
     });
   }
 
@@ -47,6 +52,9 @@ class AppHeader extends HTMLElement {
         (normalizedHref === "index.html" && currentPage === "")
       ) {
         link.classList.add("active");
+        link.setAttribute("aria-current", "page");
+      } else {
+        link.removeAttribute("aria-current");
       }
     });
   }
@@ -56,7 +64,7 @@ class AppHeader extends HTMLElement {
     const header = this.shadowRoot.querySelector("header");
     const contenedor = this.shadowRoot.querySelector(".contenedor");
 
-    if (window.innerWidth <= 520) {
+    if (window.innerWidth <= 760) {
       header.appendChild(menuOpciones);
     } else {
       contenedor.appendChild(menuOpciones);
@@ -82,7 +90,7 @@ class AppHeader extends HTMLElement {
           position: fixed;
           top: 0;
           z-index: 100;
-          width:100%;
+          width: 100%;
           height: 120px;
           background: var(--background-color);
         }
@@ -94,7 +102,8 @@ class AppHeader extends HTMLElement {
           max-width: 1000px;
           height: 100%;
           margin: 0 auto;
-          width: 100%;
+          width: min(100%, 1000px);
+          padding: 0 16px;
         }
 
         hr{
@@ -124,7 +133,7 @@ class AppHeader extends HTMLElement {
         }
 
         .menu_opciones li{
-          margin: 20px;
+          margin: 12px;
         }
 
         .menu_opciones a{
@@ -168,7 +177,24 @@ class AppHeader extends HTMLElement {
           transform-origin: left;
         }
 
-        @media (max-width:520px){
+        @media (max-width:760px){
+          header{
+            height: 76px;
+          }
+
+          .contenedor{
+            height: 76px;
+          }
+
+          .logo{
+            font-size: 24px;
+          }
+
+          .logo svg{
+            width: 42px;
+            height: 42px;
+          }
+
           button{
             display: flex;
             margin-right: 10px;
@@ -187,20 +213,36 @@ class AppHeader extends HTMLElement {
           }
 
           .menu_opciones{
-            height: 0;
+            position: absolute;
+            top: 76px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            display: none;
             overflow: hidden;
-            transition: .5s;
             border-bottom: 2px solid var(--primary-color);
             background: var(--background-color);
           }
 
           .menu_opciones.active{
-            height: 190px;
+            display: block;
+            max-height: calc(100vh - 76px);
+            overflow-y: auto;
           }
 
           .menu_opciones ul{
             flex-direction: column;
             align-items: center;
+            gap: 4px;
+          }
+
+          .menu_opciones li{
+            margin: 8px;
+          }
+
+          .menu_opciones a{
+            display: block;
+            padding: 8px 16px;
           }
         }
       </style>
@@ -220,15 +262,17 @@ class AppHeader extends HTMLElement {
             </div>
           </div>
 
-          <div class="menu_opciones">
+          <nav class="menu_opciones" aria-label="Navegación principal">
             <ul>
               <li><a href="./index.html">Principal</a></li>
               <li><a href="./explorar.html">Explorar</a></li>
-              <li><a href="#eventos">Eventos</a></li>
+              <li><a href="./eventos.html">Eventos</a></li>
+              <li><a href="./servicios.html">Servicios</a></li>
+              <li><a href="./contacto.html">Contacto</a></li>
             </ul>
-          </div>
+          </nav>
 
-          <button class="menu">
+          <button class="menu" type="button" aria-label="Abrir menú" aria-expanded="false">
             <div></div>
             <div></div>
             <div></div>

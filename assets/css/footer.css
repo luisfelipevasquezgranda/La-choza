@@ -1,17 +1,15 @@
 footer {
     border-top: 1.5px solid var(--primary-color);
-   width: 100%;
-   max-width: 1000px;
-   margin: 35px auto;
-   display: flex;
-   padding-top: 40px;
-   
-
-   
+    width: min(100% - 32px, 1000px);
+    margin: 35px auto;
+    display: flex;
+    gap: 32px;
+    padding-top: 40px;
 }
 
 footer .izquierda{
-    width: 50%;
+    flex: 1 1 0;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -133,24 +131,82 @@ footer .derechos{
 }
 
 footer .derecha{
-    width: 50%;
+    flex: 1 1 0;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
+footer .derecha h2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
 footer .derecha form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 10px;
+}
+
+footer .derecha label{
+    color: #323232;
+    font-size: 14px;
+    text-align: left;
 }
 
 footer .derecha input,
 footer .derecha textarea,
+footer .derecha select,
 footer .derecha button {
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+footer .derecha textarea{
+    min-height: 110px;
+    resize: vertical;
+}
+
+footer .derecha input:focus,
+footer .derecha textarea:focus,
+footer .derecha select:focus{
+    outline: 2px solid var(--hover-color);
+    outline-offset: 2px;
+}
+
+footer .derecha [aria-invalid="true"]{
+    border-color: #a62828;
+}
+
+footer .derecha label.consent{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+footer .derecha label.consent input{
+    width: auto;
+    margin-top: 3px;
+}
+
+footer .form-feedback{
+    min-height: 1.5em;
+    color: #245b32;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+footer .form-feedback.is-error{
+    color: #a62828;
+}
+
+footer .whatsapp-send{
+    color: #245b32;
+    font-weight: 600;
 }
 
 footer .derecha button {
@@ -181,9 +237,8 @@ footer .redes a.wpp svg:hover {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        position: relative; /* referencia para .derechos absoluto */
         gap: 30px;
-        padding: 10px 10px;
+        padding: 24px 0;
     }
 
     footer .direccion {
@@ -191,23 +246,31 @@ footer .redes a.wpp svg:hover {
     }
 
     footer .derechos {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
         width: 100%;
         text-align: center;
         margin: 0;
-        padding: 12px ;
-        background: #fff; /* opcional: evita transparencia sobre contenido */
+        padding: 12px;
     }
 
     footer .izquierda,
     footer .derecha {
         width: 100%;
+        flex-basis: auto;
     }
 
     footer .redes {
         justify-content: center;
+        flex-wrap: wrap;
+        margin-right: 0;
+    }
+
+    footer .direccion{
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+    }
+
+    footer .direccion hr{
+        height: 20px;
     }
 }

@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>explorar</title>
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/carrusel.css">
-    
+    <meta name="description" content="Explora las habitaciones sencilla, doble, matrimonial y familiar de La Choza Hotel & Hospedaje.">
+    <meta name="keywords" content="habitaciones, alojamiento, hotel, El Peñol, La Choza">
+    <meta name="author" content="La Choza Hotel & Hospedaje">
+    <meta property="og:title" content="Habitaciones | La Choza">
+    <meta property="og:description" content="Encuentra una opción de alojamiento para tu estadía en La Choza.">
+    <meta property="og:type" content="website">
+    <title>Habitaciones | La Choza</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/carrusel.css">
+
 </head>
 
 <body>
+    <!-- Encabezado principal de la página -->
     <app-header ></app-header>
-    
-    <div class="carousel">
 
+    <!-- Contenedor del carrusel de habitaciones -->
+    <main>
+    <h1 class="visually-hidden">Habitaciones de La Choza</h1>
+    <section class="carousel" aria-label="Opciones de habitaciones">
+
+        <!-- Lista de slides que se muestran uno tras otro -->
         <div class="list">
 
-            <div class="item" style="background-image: url(image/DJI_0018.JPG);">
+            <div class="item" style="background-image: url(assets/images/DJI_0018.JPG);">
                 <div class="content">
-                    <div class="title">Habitacion</div>
+                    <div class="title">Habitación</div>
                     <div class="name">Sencilla</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                    <div class="des">Habitación individual para descansar después de un día de paseo o trabajo. Consulta disponibilidad y servicios al momento de reservar.</div>
                     <div class="btn">
-                        <button id="open">Ver mas</button>    
-                        <dialog id="modal">
+                        <button class="open-modal">Ver más</button>
+                        <dialog class="modal">
                             <div class="modal-content">
 
                                <div class="container">
@@ -33,13 +44,14 @@
                                    <div class="card">
                                        <div class="face face1">
                                            <div class="contenido">
-                                               <img src="image/WhatsApp Image 2025-10-29 at 2.23.22 PM (4).jpeg" alt="" width="200px" height="200px">
-                                              
+                                               <img src="assets/images/WhatsApp Image 2025-10-29 at 2.23.22 PM (4).jpeg" alt="Habitación sencilla" width="200px" height="200px">
+                                               <h3>Capacidad y camas</h3>
+
                                            </div>
                                        </div>
                                        <div class="face face2">
                                            <div class="contenido ">
-                                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolores corrupti iure, facere, similique alias impedit sapiente nemo voluptatum amet maxime. Aliquam quo labore porro nemo veritatis incidunt asperiores animi.</p>
+                                               <p>Ideal para 1 huésped. Confirma la cama disponible al reservar.</p>
                                            </div>
                                        </div>
                                    </div>
@@ -47,198 +59,248 @@
                                    <div class="card">
                                        <div class="face face1">
                                            <div class="contenido">
-                                               <img src="image/WhatsApp Image 2025-10-29 at 2.23.22 PM (1).jpeg" alt=""width="200px" height="200px">
-                                               <h3>Lorem, ipsum dolor.</h3>
+                                               <img src="assets/images/WhatsApp Image 2025-10-29 at 2.23.22 PM (1).jpeg" alt="Detalle de habitación" width="200px" height="200px">
+                                               <h3>Servicios</h3>
                                            </div>
                                        </div>
                                        <div class="face face2">
                                            <div class="contenido ">
-                                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolores corrupti iure, facere, similique alias impedit sapiente nemo voluptatum amet maxime. Aliquam quo labore porro nemo veritatis incidunt asperiores animi.</p>
+                                               <p>Consulta qué servicios están incluidos en la tarifa.</p>
                                            </div>
                                        </div>
                                    </div>
-                                   
+
                                    <div class="card">
                                        <div class="face face1">
                                            <div class="contenido">
-                                               <img src="image/WhatsApp Image 2025-10-29 at 2.23.22 PM (3).jpeg" alt=""width="200px" height="200px">
-                                               <h3>Lorem, ipsum dolor.</h3>
+                                               <img src="assets/images/WhatsApp Image 2025-10-29 at 2.23.22 PM (3).jpeg" alt="Alojamiento en La Choza" width="200px" height="200px">
+                                               <h3>Reservas y horarios</h3>
                                            </div>
                                        </div>
                                        <div class="face face2">
                                            <div class="contenido ">
-                                               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dolores corrupti iure, facere, similique alias impedit sapiente nemo voluptatum amet maxime. Aliquam quo labore porro nemo veritatis incidunt asperiores animi.</p>
+                                               <p>Confirma tarifa, disponibilidad y horarios antes de viajar.</p>
                                            </div>
                                        </div>
                                    </div>
                                </div>
-   
-                            
+
+
                             </div>
-                            <button id="close">Cerrar</button>
+                            <button class="close-modal">Cerrar</button>
                         </dialog>
-                        
+
                     </div>
                 </div>
             </div>
 
-            <div class="item" style="background-image: url(image/owl1.jpg);">
-                
+            <div class="item" style="background-image: url(https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg);">
                 <div class="content">
-                    <div class="title">SLIDER</div>
-                    <div class="name">OWL</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                    <div class="title">Habitación</div>
+                    <div class="name">Doble</div>
+                    <div class="des">Disfruta una estadía cómoda para dos personas, con un ambiente acogedor y todo lo necesario para descansar.</div>
                     <div class="btn">
-                        <button>See More</button>
-                        <button>Subscribe</button>
+                        <button class="open-modal">Ver más</button>
+                        <dialog class="modal">
+                            <div class="modal-content">
+
+                               <div class="container">
+
+
+
+                                   <div class="card">
+                                       <div class="face face1">
+                                           <div class="contenido">
+                                               <img src="https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg" alt="Habitación doble con decoración acogedora" width="200px" height="200px">
+                                               <h3>Capacidad y camas</h3>
+
+                                           </div>
+                                       </div>
+                                       <div class="face face2">
+                                           <div class="contenido ">
+                                               <p>Para 2 huéspedes. Confirma la distribución de camas al reservar.</p>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                                   <div class="card">
+                                       <div class="face face1">
+                                           <div class="contenido">
+                                               <img src="https://images.pexels.com/photos/1743231/pexels-photo-1743231.jpeg" alt="Cama doble en habitación luminosa" width="200px" height="200px">
+                                               <h3>Servicios</h3>
+                                           </div>
+                                       </div>
+                                       <div class="face face2">
+                                           <div class="contenido ">
+                                               <p>Revisa los servicios incluidos y la tarifa para tus fechas.</p>
+                                           </div>
+                                       </div>
+                                   </div>
+
+                                   <div class="card">
+                                       <div class="face face1">
+                                           <div class="contenido">
+                                               <img src="https://images.pexels.com/photos/189296/pexels-photo-189296.jpeg" alt="Interior de una habitación de descanso" width="200px" height="200px">
+                                               <h3>Reservas y horarios</h3>
+                                           </div>
+                                       </div>
+                                       <div class="face face2">
+                                           <div class="contenido ">
+                                               <p>Consulta disponibilidad y horarios de entrada y salida.</p>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+
+
+                            </div>
+                            <button class="close-modal">Cerrar</button>
+                        </dialog>
+
                     </div>
                 </div>
-
             </div>
 
-            <div class="item" style="background-image: url(image/crow.jpg);">
-
+            <div class="item" style="background-image: url(https://images.pexels.com/photos/262048/pexels-photo-262048.jpeg);">
                 <div class="content">
-                    <div class="title">SLIDER</div>
-                    <div class="name">CROW</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                    <div class="title">Habitación</div>
+                    <div class="name">Matrimonial</div>
+                    <div class="des">Un espacio tranquilo y confortable para compartir en pareja y disfrutar de una escapada especial.</div>
                     <div class="btn">
-                        <button>See More</button>
-                        <button>Subscribe</button>
+                        <button class="open-modal">Ver más</button>
+                        <dialog class="modal">
+                            <div class="modal-content">
+                                <div class="container">
+                                    <div class="card">
+                                        <div class="face face1">
+                                            <div class="contenido">
+                                                <img src="https://images.pexels.com/photos/2029667/pexels-photo-2029667.jpeg" alt="Habitación matrimonial con cama confortable" width="200px" height="200px">
+                                                <h3>Capacidad y camas</h3>
+                                            </div>
+                                        </div>
+                                        <div class="face face2">
+                                            <div class="contenido">
+                                                <p>Para 2 huéspedes. Confirma el tipo de cama al reservar.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="face face1">
+                                            <div class="contenido">
+                                                <img src="https://images.pexels.com/photos/1838554/pexels-photo-1838554.jpeg" alt="Habitación matrimonial con iluminación cálida" width="200px" height="200px">
+                                                <h3>Servicios</h3>
+                                            </div>
+                                        </div>
+                                        <div class="face face2">
+                                            <div class="contenido">
+                                                <p>Consulta los servicios incluidos en la tarifa elegida.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="face face1">
+                                            <div class="contenido">
+                                                <img src="https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg" alt="Dormitorio matrimonial acogedor" width="200px" height="200px">
+                                                <h3>Reservas y horarios</h3>
+                                            </div>
+                                        </div>
+                                        <div class="face face2">
+                                            <div class="contenido">
+                                                <p>Confirma disponibilidad, tarifa y horarios antes de viajar.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="close-modal">Cerrar</button>
+                        </dialog>
                     </div>
                 </div>
-
             </div>
 
-            <div class="item" style="background-image: url(image/butterfly1.jpeg);">
-                
+            <div class="item" style="background-image: url(https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg);">
                 <div class="content">
-                    <div class="title">SLIDER</div>
-                    <div class="name">BUTTERFLY</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
+                    <div class="title">Habitación</div>
+                    <div class="name">Familiar</div>
+                    <div class="des">Un ambiente amplio y acogedor, ideal para compartir una estadía cómoda en familia.</div>
                     <div class="btn">
-                        <button>See More</button>
-                        <button>Subscribe</button>
+                        <button class="open-modal">Ver más</button>
+                        <dialog class="modal">
+                            <div class="modal-content">
+                                <div class="container">
+                                    <div class="card">
+                                        <div class="face face1">
+                                            <div class="contenido">
+                                                <img src="https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg" alt="Habitación familiar con espacio para compartir" width="200px" height="200px">
+                                                <h3>Capacidad y camas</h3>
+                                            </div>
+                                        </div>
+                                        <div class="face face2">
+                                            <div class="contenido">
+                                                <p>Consulta la capacidad máxima y las camas disponibles.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="face face1">
+                                            <div class="contenido">
+                                                <img src="https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg" alt="Dormitorio amplio para una estadía en familia" width="200px" height="200px">
+                                                <h3>Servicios</h3>
+                                            </div>
+                                        </div>
+                                        <div class="face face2">
+                                            <div class="contenido">
+                                                <p>Confirma los servicios incluidos según el número de huéspedes.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="face face1">
+                                            <div class="contenido">
+                                                <img src="https://images.pexels.com/photos/2034335/pexels-photo-2034335.jpeg" alt="Interior acogedor de una habitación familiar" width="200px" height="200px">
+                                                <h3>Reservas y horarios</h3>
+                                            </div>
+                                        </div>
+                                        <div class="face face2">
+                                            <div class="contenido">
+                                                <p>Consulta tarifas, disponibilidad y horarios antes de viajar.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="close-modal">Cerrar</button>
+                        </dialog>
                     </div>
                 </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/owl2.jpg);">
-                
-                <div class="content">
-                    <div class="title">SLIDER</div>
-                    <div class="name">OWL</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>See More</button>
-                        <button>Subscribe</button>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/eagel3.jpg);">
-                
-                <div class="content">
-                    <div class="title">SLIDER</div>
-                    <div class="name">EAGLE</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>See More</button>
-                        <button>Subscribe</button>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/kingfirser2.jpeg);">
-                
-                <div class="content">
-                    <div class="title">SLIDER</div>
-                    <div class="name">KINGFISHER</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>See More</button>
-                        <button>Subscribe</button>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/parrot2.jpg);">
-                
-                <div class="content">
-                    <div class="title">SLIDER</div>
-                    <div class="name">PARROT</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>See More</button>
-                        <button>Subscribe</button>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/heron.jpeg);">
-                
-                <div class="content">
-                    <div class="title">SLIDER</div>
-                    <div class="name">HERON</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>See More</button>
-                        <button>Subscribe</button>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/butterfly2.jpg);">
-                
-                <div class="content">
-                    <div class="title">SLIDER</div>
-                    <div class="name">BUTTERFLY</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>See More</button>
-                        <button>Subscribe</button>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="item" style="background-image: url(image/parrot2.jpg);">        
-                
-                <div class="content">
-                    <div class="title">SLIDER</div>
-                    <div class="name">PARROT</div>
-                    <div class="des">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis culpa similique consequuntur, reprehenderit dicta repudiandae.</div>
-                    <div class="btn">
-                        <button>See More</button>
-                        <button>Subscribe</button>
-                    </div>
-                </div>
-
             </div>
 
         </div>
 
-        <!--next prev button-->
+        <!-- Botones para avanzar o retroceder en el carrusel -->
         <div class="arrows">
             <button class="prev"><</button>
             <button class="next">></button>
         </div>
 
-
-        <!-- time running -->
+        <!-- Barra visual de progreso del cambio automático -->
         <div class="timeRunning"></div>
 
-    </div>
-    
+    </section>
+    <aside class="home-note">
+        <p>Las tarifas, la disponibilidad y los servicios se confirman al <a href="./contacto.html">consultar tu reserva</a>.</p>
+    </aside>
+    </main>
+
+    <!-- Pie de página -->
     <app-footer></app-footer>
-    
-    <script type="module" src="./js/main.js"></script>
-    <script type="module" src="./js/carrusel.js"></script>
+
+    <!-- Archivos JavaScript del proyecto -->
+    <script type="module" src="./assets/js/script.js"></script>
+    <script type="module" src="./assets/js/carrusel.js"></script>
 </body>
 </html>
